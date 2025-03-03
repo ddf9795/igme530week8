@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MiniLife.gd" type="Script" id=2]
+
+[node name="MiniLife" type="ColorRect"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+color = Color( 1, 1, 1, 0 )
+script = ExtResource( 2 )
