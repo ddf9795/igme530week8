@@ -4,22 +4,23 @@
 [ext_resource path="res://Title.gd" type="Script" id=2]
 
 [sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0, 0.517588, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0 )
+offsets = PoolRealArray( 0, 0.507538, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 2 )
 curve = SubResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 350.0
-margin_bottom = -450.0
+margin_top = 1882.0
+margin_right = -2500.0
+margin_bottom = 316.0
+rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[center]petri dish
+bbcode_text = "[center]petri dish 2
 
 by Leftie
 
@@ -29,7 +30,7 @@ by Leftie
 
 
 press R to restart"
-text = "petri dish
+text = "petri dish 2
 
 by Leftie
 

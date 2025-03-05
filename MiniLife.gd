@@ -1,8 +1,9 @@
 extends ColorRect
 
-var columnCount = 5;
-var rowCount = 5;
+var columnCount = 10;
+var rowCount = 10;
 var alive = 0;
+var inStatis = 0;
 var currentCells = [];
 var nextCells = [];
 
@@ -57,7 +58,7 @@ func isAlive():
 		for row in range(rowCount):
 			totalCount += 1
 			liveCount += currentCells[column][row]
-	return (liveCount > (totalCount / 10))
+	return (liveCount > (totalCount / 8))
 	
 func kill():
 	alive = 0
@@ -98,10 +99,16 @@ func revive():
 				currentCells[column][row] = rand
 		nextCells = currentCells.duplicate(true)
 
+func inStasis():
+	return not alive and isAlive()
+
 func _draw():
 #	if not isAlive(): return;
-	var col = Color.black if alive else Color.darkgray
+	var col = Color("002200")
+	if inStasis(): col = Color("#006600")
+	if alive: col = Color("00ff00")
+#	var col = Color.black if alive else Color.darkgray
 	for column in range(columnCount):
 		for row in range(rowCount):
 			if currentCells[column][row] == 1:
-				draw_rect(Rect2(column * 20, row * 20, 20, 20), col)
+				draw_rect(Rect2(column * 10, row * 10, 10, 10), col)

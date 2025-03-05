@@ -1,7 +1,7 @@
 extends Node
 
-var columnCount = 10;
-var rowCount = 10;
+var columnCount = 50;
+var rowCount = 50;
 var currentCells = [];
 var nextCells = [];
 
@@ -26,7 +26,7 @@ func _ready():
 		for row in range(rowCount):
 			var miniGame = preload("res://MiniLife.tscn").instance()
 			currentCells[column][row] = miniGame;
-			$GridContainer.add_child(miniGame)
+			$"%GridContainer".add_child(miniGame)
 	nextCells = currentCells.duplicate(true)
 
 func _process(delta):
